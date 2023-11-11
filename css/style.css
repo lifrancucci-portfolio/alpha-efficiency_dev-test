@@ -1,0 +1,77 @@
+/* VARIABLES */
+:root {
+  /* COLORS */
+  --clr-light: #FFF;
+  --clr-dark: #333;
+  --clr-mid: #C4C4C4;
+  --clr--background: #F5F5F5;
+  --clr-primary: #73C3F4;
+  --clr-secondary: #FFD900;
+  --clr-accent: #DD71C6;
+  /* FONTS */
+  --font-body: 'Montserrat', sans-serif;
+  --font-title: 'Libre Baskerville', serif;
+}
+/* GENERAL STYLES */
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr--background);
+}
+h1, h2, h3, h4, h5, h6,
+.title, .subtitle {
+  font-family: var(--font-title);
+  font-weight: normal;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 20px;
+}
+button, .btn {
+  font-size: 16px;
+  color: var(--clr-light);
+  border: none;
+  border-radius: 0;
+  padding: .5em;
+}
+.btn--primary {
+  background-color: var(--clr-accent);
+}
+.btn--secondary {
+  background-color: var(--clr-secondary);
+}
+/* HERO */
+
+/* BULLET POINTS */
+#bullet-points {
+  background-color: var(--clr-accent);
+}
+
+/* WHO / HOW */
+#who-how {
+  background-color: var(--clr-primary);
+}
+
+/* WE CAN HELP YOU */
+#we-can-help-you {
+  background-color: var(--clr-light);
+}
+
+/* FREE CONSULTATION */
+#free-consultation {
+  background-color: var(--clr-mid);
+}
+
+/* FAQ */
+#faq {
+  background-color: var(--clr-light);
+}
+
+/* FOOTER */
+footer, .footer {
+  background-color: var(--clr-mid);
+}
