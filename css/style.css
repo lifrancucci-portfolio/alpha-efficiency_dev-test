@@ -71,6 +71,11 @@ li {
 img {
   max-width: 100%;
 }
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .container {
   padding: var(--spacing-medium);
 }
@@ -106,11 +111,6 @@ img {
 }
 
 /* HERO */
-#hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .hero__info-grid {
   display: grid;
 }
@@ -167,9 +167,6 @@ img {
 
 /* BULLET POINTS */
 #bullet-points {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: var(--clr-accent);
 }
 .bullet-points__cards {
@@ -205,9 +202,6 @@ img {
 
 /* WHO / HOW */
 #who-how {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: var(--clr-primary);
   color: var(--clr-light);
 }
@@ -223,6 +217,18 @@ img {
 /* WE CAN HELP YOU */
 #we-can-help-you {
   background-color: var(--clr-light);
+}
+#we-can-help-you p {
+  padding: var(--spacing-small) 0;
+}
+#we-can-help-you .section__image {
+  width: 100vw;
+}
+#we-can-help-you .container:last-of-type {
+  padding-bottom: 0;
+}
+#we-can-help-you .btn {
+  margin-bottom: var(--spacing-medium);
 }
 
 /* FREE CONSULTATION */
