@@ -55,12 +55,17 @@ button, .btn {
   padding: .75em;
   margin: var(--spacing-medium) auto var(--spacing-small);
   justify-self: center;
+  transition: all .2s ease;
+}
+.btn:hover {
+  cursor: pointer;
+  background: radial-gradient(#CF2BAC, #B12694);
 }
 .btn--primary {
-  background-color: var(--clr-accent);
+  background: var(--clr-accent);
 }
 .btn--secondary {
-  background-color: var(--clr-secondary);
+  background: var(--clr-secondary);
 }
 a, a:hover, a:visited {
   color: inherit;
@@ -145,7 +150,8 @@ section {
   transform: scaleY(1);
 }
 .nav__links li {
-  padding: .2em 0;
+  padding: 0;
+  border-bottom: 3px solid transparent;
 }
 
 /* HERO */
@@ -453,6 +459,7 @@ section {
   padding-right: 1rem;
 }
 .faq__item .question img {
+  cursor: pointer;
   padding: 0.5rem;
 }
 .faq__item .answer {
@@ -727,7 +734,7 @@ section {
   }
   /* HEADER */
   .header {
-    background-color: var(--clr-background);
+    background-color: transparent;
   }
   .header .container {
     max-width: var(--max-width);
@@ -739,8 +746,8 @@ section {
   }
   .header__nav {
     width: 100%;
-    padding-left: var(--spacing-medium);
-    background-color: var(--clr-background);
+    padding-left: var(--spacing-small);
+    background-color: transparent;
   }
   .nav__mobile-menu-icon {
     display: none;
@@ -756,8 +763,13 @@ section {
   .nav__links li {
     text-align: center;
   }
+  .nav__links li:hover {
+    border-bottom: 3px solid var(--clr-accent);
+  }
   /* HERO */
   #hero {
+    margin-top: 0;
+    padding-top: 150px;
     background-color: var(--clr-background);
   }
   #hero .decorations .circle--left {
@@ -789,6 +801,7 @@ section {
   }
   .hero__info-grid .btn {
     grid-area: button;
+    margin: var(--spacing-small) 0;
     justify-self: flex-start;
   }
   .hero__info-grid .hero__countdown-section {
