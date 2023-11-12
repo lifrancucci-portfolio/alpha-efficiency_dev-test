@@ -47,12 +47,14 @@ p {
   line-height: 160%;
 }
 button, .btn {
+  display: block;
   font-size: 16px;
   color: var(--clr-light);
   border: none;
   border-radius: 0;
   padding: .75em;
-  margin-top: var(--spacing-small);
+  /* margin-top: var(--spacing-small); */
+  margin: var(--spacing-medium) auto var(--spacing-small);
   justify-self: center;
 }
 .btn--primary {
@@ -205,21 +207,15 @@ section {
 .bullet-points__cards .card__icon {
   margin: .5rem;
 }
-
 /* WHO / HOW */
 #who-how {
   background-color: var(--clr-primary);
   color: var(--clr-light);
 }
-/* #who-how .row {
-  margin: var(--spacing-small) auto;
-} */
 #who-how .section__image {
   width: 363px;
-  max-width: 90vw;
   margin: var(--spacing-medium) 0;
 }
-
 /* WE CAN HELP YOU */
 #we-can-help-you {
   background-color: var(--clr-light);
@@ -233,10 +229,12 @@ section {
 #we-can-help-you .container:last-of-type {
   padding-bottom: 0;
 }
+#we-can-help-you .text-adjust {
+  display: none;
+}
 #we-can-help-you .btn {
   margin-bottom: var(--spacing-medium);
 }
-
 /* FREE CONSULTATION */
 #free-consultation {
   background-color: var(--clr-background);
@@ -295,7 +293,6 @@ section {
   left: -1rem;
   top: 0.5rem;
 }
-
 /* FAQ */
 #faq {
   background-color: var(--clr-light);
@@ -380,7 +377,7 @@ section {
     padding: var(--spacing-small) var(--spacing-large) var(--spacing-medium);
   }
   .header.container,
-  .footer.container {
+  .footer .container {
     padding: var(--spacing-small) var(--spacing-large);
   }
   h1 {
@@ -425,6 +422,7 @@ section {
   .bullet-points__cards .card {
     padding: 1rem;
     height: unset;
+    justify-content: flex-start;
   }
   .bullet-points__cards p {
     font-size: 16px;
@@ -438,6 +436,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   #free-consultation .card {
     max-width: 636px;
@@ -461,5 +460,198 @@ section {
   }
   .footer .social-icons {
     margin: 0 var(--spacing-large) 0 0;
+  }
+}
+/* MEDIUM MONITOR UP */
+@media screen and (min-width: 1200px) {
+  .container {
+      padding: var(--spacing-large) var(--spacing-large) var(--spacing-large);
+  }
+  .header.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing-small) 0;
+  }
+  .header__logo {
+    width: 138px;
+  }
+  .header__nav {
+    width: 100%;
+    padding-left: var(--spacing-medium);
+  }
+  .nav__mobile-menu-icon {
+    display: none;
+  }
+  .nav__links {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    opacity: 1;
+    transform: scaleY(100%);
+  }
+  .nav__links li {
+    text-align: center;
+  }
+  /* .nav__links li + li {
+    margin-left: 1rem;
+  } */
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  .hero__info-grid,
+  .bullet-points__cards,
+  .row {
+    width: 100%;
+    max-width: var(--max-width);
+  }
+  .hero__info-grid {
+    grid-template: 
+                  "title  countdown"
+                  "body   countdown"
+                  "button countdown";
+    gap: 1rem;
+  }
+  .hero__info-grid .hero__title {
+    margin: 0;
+    grid-area: title;
+  }
+  .hero__info-grid .hero__spots-available {
+    grid-area: body;
+  }
+  .hero__info-grid .hero__spots-remaining {
+    display: none;
+  }
+  .hero__info-grid .btn {
+    grid-area: button;
+    justify-self: flex-start;
+  }
+  .hero__info-grid .hero__countdown-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 630px;
+    height: 321px;
+    grid-area: countdown;
+    padding: var(--spacing-small) var(--spacing-medium);
+  }
+  .hero__countdown-section .countdown__items {
+    margin-top: var(--spacing-small);
+  }
+  .hero__countdown-section p,
+  .hero__countdown-section .countdown__text {
+    font-size: 18px;
+  }
+  .hero__countdown-section .countdown__number {
+    font-size: 50px;
+  }
+  /* BULLET POINTS */
+  .bullet-points__cards {
+    gap: 2.5rem;
+  }
+  .bullet-points__cards .card__icon {
+    width: 47px;
+  }
+  .bullet-points__cards .card__highlight {
+    margin: 1rem 0;
+  }
+  .bullet-points__cards .card__highlight,
+  .bullet-points__cards .card__highlight span {
+    font-size: 40px;
+  }
+  .bullet-points__cards p {
+    font-size: 18px;
+  }
+  /* WHO/HOW */
+  #who-how .container {
+    display: flex;
+    flex-direction: row;
+    max-width: var(--max-width);
+    padding: var(--spacing-large) 0;
+    margin: 0 auto;
+  }
+  #who-how .col {
+    width: 100%;
+    flex: 1;
+  }
+  #who-how .col p {
+    max-width: 380px;
+  }
+  #who-how .section__image {
+    width: 550px;
+  }
+  #who-how .btn {
+    margin: var(--spacing-medium) 0;
+  }
+  /* WE CAN HELP YOU */
+  #we-can-help-you {
+    text-align: center;
+  }
+  #we-can-help-you .section__image {
+    order: 1;
+    max-width: 1000px; 
+  }
+  #we-can-help-you .container {
+    padding: var(--spacing-medium) 0 0;
+  }
+  #we-can-help-you .container:last-of-type {
+    padding-top: 0;
+  }
+  #we-can-help-you .text-adjust {
+    display: inline;
+  }
+  #we-can-help-you .container > .row:first-child {
+    margin-bottom: var(--spacing-small);
+  }
+  #we-can-help-you .container .row:nth-of-type(2) {
+    display: none;
+  }
+  #we-can-help-you .btn {
+    margin: var(--spacing-small) 0 var(--spacing-medium);
+  }
+  /* FREE CONSULTATION */
+  #free-consultation .section__cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #free-consultation .card {
+    max-width: 447px;
+  }
+  #free-consultation .card__title {
+    font-size: 24px;
+  }
+  #free-consultation .card li {
+    font-size: 16px;
+  }
+  /* FAQ */
+  .faq__item .question,
+  .faq__item .answer {
+    padding: var(--spacing-small);
+  }
+  .faq__item .question,
+  .faq__item .answer {
+    font-size: 16px;
+  }
+  /* FOOTER */
+  .footer .container {
+    padding: var(--spacing-large) 0;
+    margin: 0 auto;
+    max-width: var(--max-width);
+  }
+  .footer .container > .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer .container > .row:last-child {
+    margin-top: var(--spacing-medium);
+  }
+  .footer .col--info,
+  .footer .col--links,
+  .footer .social-icons,
+  .footer .copyright {
+    width: 440px;
   }
 }
