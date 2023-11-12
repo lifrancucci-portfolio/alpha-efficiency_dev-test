@@ -36,7 +36,17 @@ function contentLoaded() {
   // FAQ
   const faq = document.getElementById("faq");
   const questions = Array.from(faq.querySelectorAll(".faq__item"));
-  console.log(questions);
+  // const btns = Array.from(faq.querySelectorAll(".question > img"));
+
+  // btns.forEach((btn) => {
+  //   btn.addEventListener("click", (e) => {
+  //     clearSelection(e.target);
+  //   });
+  // });
+
+  // function clearSelection(selectedElement) {
+  //   console.log(selectedElement);
+  // }
 
   questions.forEach((question) => {
     const btnOpenMenu = question.querySelector(".question > img");
