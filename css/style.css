@@ -51,6 +51,7 @@ button, .btn {
   border: none;
   border-radius: 0;
   padding: .75em;
+  margin-top: var(--spacing-small);
   justify-self: center;
 }
 .btn--primary {
@@ -67,7 +68,7 @@ li {
   list-style: none;
 }
 img {
-  width: 100%;
+  max-width: 100%;
 }
 .container {
   padding: var(--spacing-medium);
@@ -130,14 +131,15 @@ img {
   align-items: center;
   width: 100%;
   height: 159px;
-  padding: var(--spacing-small);
+  padding: 0 var(--spacing-small);
   margin: var(--spacing-small) auto;
   /* background-color: var(--clr-mid); */
   border: 1px solid var(--clr-accent);
   border-radius: 30px;
 }
-.hero__countdown-section p {
-  margin: var(--spacing-small) auto;
+.hero__countdown-section > p,
+.hero__countdown-section .countdown__number {
+  margin: 1.5rem auto;
 }
 .hero__countdown-section .countdown__items {
   display: flex;
@@ -162,13 +164,43 @@ img {
 .hero__spots-available {
   margin: var(--spacing-small) auto;
 }
-#hero .btn--primary {
-  margin-top: var(--spacing-small);
-} 
 
 /* BULLET POINTS */
 #bullet-points {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--clr-accent);
+}
+.bullet-points__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.bullet-points__cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--clr-light);
+  border-radius: 20px;
+  width: 100%;
+  height: 157px;
+  padding: .5rem;
+}
+.bullet-points__cards .card__highlight {
+  font-size: 16px;
+}
+.bullet-points__cards .card__highlight span {
+  font-size: 14px;
+  color: var(--clr-mid);
+}
+.bullet-points__cards p {
+  font-size: 12px;
+}
+.bullet-points__cards .card__icon {
+  margin: .5rem;
 }
 
 /* WHO / HOW */
