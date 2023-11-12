@@ -295,6 +295,37 @@ section {
 #faq {
   background-color: var(--clr-light);
 }
+.faq__item {
+  margin: 0.5rem 0;
+  width: 100%;
+}
+.faq__item .question,
+.faq__item .answer {
+  background-color: var(--clr-background);
+  border-radius: 12px;
+  padding: .5rem;
+  font-size: 14px;
+  line-height: 175%;
+  width: 100%;
+}
+.faq__item .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq__item .question p {
+  padding-right: 1rem;
+}
+.faq__item .answer {
+  display: none;
+  margin-top: -1.5rem;
+  padding-top: 1.5rem;
+  /* opacity: 0;
+  transform-origin: top;
+  transform: scaleY(0%);
+  height: 0px;
+  transition: all .2s ease; */
+}
 
 /* FOOTER */
 footer, .footer {
