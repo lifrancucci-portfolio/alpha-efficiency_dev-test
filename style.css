@@ -44,6 +44,14 @@ button, .btn {
 .btn--secondary {
   background-color: var(--clr-secondary);
 }
+.circle {
+  border-radius: 50%;
+  border-width: 28px;
+}
+.circle.translucid {
+  opacity: 0.15;
+}
+
 /* HERO */
 
 /* BULLET POINTS */
