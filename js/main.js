@@ -33,4 +33,17 @@ function contentLoaded() {
     );
     seconds.innerHTML = Math.floor((timeRemaining % (1000 * 60)) / 1000);
   });
+  // FAQ
+  const faq = document.getElementById("faq");
+  const questions = Array.from(faq.querySelectorAll(".faq__item"));
+  console.log(questions);
+
+  questions.forEach((question) => {
+    const btnOpenMenu = question.querySelector(".question > img");
+    const answer = question.querySelector(".answer");
+
+    btnOpenMenu.addEventListener("click", () => {
+      answer.classList.toggle("active");
+    });
+  });
 }

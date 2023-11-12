@@ -322,21 +322,31 @@ section {
 }
 .faq__item .question {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 .faq__item .question p {
   padding-right: 1rem;
 }
 .faq__item .answer {
-  display: none;
+  /* display: none; */
   margin-top: -1.5rem;
-  padding-top: 1.5rem;
-  /* opacity: 0;
+  padding-top: 1rem;
+  opacity: 0;
   transform-origin: top;
   transform: scaleY(0%);
   height: 0px;
-  transition: all .2s ease; */
+  transition: all .2s ease;
+}
+.faq__item .answer.active {
+  /* display: block; */
+  padding-top: 1.5rem;
+  opacity: 1;
+  transform: scaleY(100%);
+  height: unset;
+  transition: all .2s ease;
 }
 
 /* FOOTER */
