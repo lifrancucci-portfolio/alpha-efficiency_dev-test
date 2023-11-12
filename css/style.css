@@ -80,6 +80,10 @@ section {
 .container {
   padding: var(--spacing-medium);
 }
+.row {
+  margin: var(--spacing-small) 0;
+  max-width: 440px;
+}
 .circle {
   border-radius: 50%;
   border-width: 28px;
@@ -163,7 +167,7 @@ section {
   font-size: 18px;
 }
 .hero__spots-available {
-  margin: var(--spacing-small) auto;
+  margin: var(--spacing-small) 0;
 }
 
 /* BULLET POINTS */
@@ -173,6 +177,7 @@ section {
 .bullet-points__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
   gap: 1rem;
 }
 .bullet-points__cards .card {
@@ -206,9 +211,9 @@ section {
   background-color: var(--clr-primary);
   color: var(--clr-light);
 }
-#who-how .item {
+/* #who-how .row {
   margin: var(--spacing-small) auto;
-}
+} */
 #who-how .section__image {
   width: 363px;
   max-width: 90vw;
@@ -219,8 +224,8 @@ section {
 #we-can-help-you {
   background-color: var(--clr-light);
 }
-#we-can-help-you p {
-  padding: var(--spacing-small) 0;
+#we-can-help-you .container > .row:first-child {
+  margin-bottom: var(--spacing-medium);
 }
 #we-can-help-you .section__image {
   width: 100vw;
@@ -363,4 +368,98 @@ section {
 }
 .footer .social-icons img {
   margin-right: 1rem;
+}
+
+/* ******************************* */
+/* ******** MEDIA QUERIES ******** */
+/* ******************************* */
+
+/* TABLET PORTRAIT UP */
+@media screen and (min-width: 600px) {
+  .container {
+    padding: var(--spacing-small) var(--spacing-large) var(--spacing-medium);
+  }
+  .header.container,
+  .footer.container {
+    padding: var(--spacing-small) var(--spacing-large);
+  }
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  /* HERO */
+  .hero__info-grid {
+    width: 100%;
+  }
+  .hero__title {
+    text-align: left;
+    align-self: flex-start;
+  } 
+  .hero__spots-available {
+    align-self: flex-start;
+  }
+  .hero__countdown-section {
+    width: 394px;
+    height: 223px;
+  }
+  .hero__countdown-section .countdown__text {
+    font-size: 12px;
+  }
+  .hero__countdown-section .countdown__number {
+    font-size: 36px;
+  }
+  /* BULLET POINTS */
+  .bullet-points__cards {
+    grid-template-columns: repeat(4, 1fr);
+    margin: var(--spacing-small) 0;
+    gap: 1.5rem;
+  }
+  .bullet-points__cards .card__highlight {
+    font-size: 24px;
+  }
+  .bullet-points__cards .card__highlight span {
+    font-size: 20px;
+  }
+  .bullet-points__cards .card {
+    padding: 1rem;
+    height: unset;
+  }
+  .bullet-points__cards p {
+    font-size: 16px;
+  }
+  /* WHO/HOW */
+  #who-how .section__image {
+    width: 439px;
+  }
+  /* FREE CONSULTATION */
+  #free-consultation .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #free-consultation .card {
+    max-width: 636px;
+    padding: var(--spacing-small) var(--spacing-medium);
+  }
+  /* FOOTER */
+  .footer {
+    font-size: 16px;
+  }
+  .footer .col--links {
+    width: 100%;
+    display: flex;
+  }
+  .footer .col--links > .col--inner {
+    margin-right: 3rem;
+  }
+  .footer .row:last-child {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+  }
+  .footer .social-icons {
+    margin: 0 var(--spacing-large) 0 0;
+  }
 }
