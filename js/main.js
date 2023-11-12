@@ -1,10 +1,12 @@
 function contentLoaded() {
   // HEADER
-  const mobileToggle = document.querySelector(".nav__mobile-menu-icon");
-  const navMenu = document.querySelector(".nav__links");
+  const header = document.querySelector(".header");
+  const mobileToggle = header.querySelector(".nav__mobile-menu-icon");
+  const navMenu = header.querySelector(".nav__links");
 
   mobileToggle.addEventListener("click", () => {
     navMenu.classList.toggle("active");
+    header.classList.toggle("active");
   });
 
   // COUNTDOWN TIMER
