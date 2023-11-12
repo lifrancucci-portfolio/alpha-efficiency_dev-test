@@ -67,6 +67,7 @@ a, a:hover, a:visited {
 }
 li {
   list-style: none;
+  line-height: 160%;
 }
 img {
   max-width: 100%;
@@ -233,7 +234,61 @@ section {
 
 /* FREE CONSULTATION */
 #free-consultation {
-  background-color: var(--clr-mid);
+  background-color: var(--clr-background);
+}
+#free-consultation .section__title span {
+  color: var(--clr-accent);
+}
+#free-consultation .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background-color: var(--clr-light);
+  padding: .5rem;
+  margin: var(--spacing-small) auto;
+  font-size: 14px;
+}
+#free-consultation .card__title {
+  font-family: var(--font-title);
+  font-size: 18px;
+  margin: .5rem auto;
+}
+#free-consultation hr {
+  border: 0;
+  width: 236px;
+  max-width: 90%;
+  height: 1px;
+  margin: 17px auto;
+}
+#free-consultation .card:first-of-type .card__title {
+  color: var(--clr-primary);
+}
+#free-consultation .card:first-of-type hr {
+  background-color: var(--clr-primary);
+}
+#free-consultation .card:last-of-type .card__title {
+  color: var(--clr-accent);
+}
+#free-consultation .card:last-of-type hr {
+  background-color: var(--clr-accent);
+}
+#free-consultation .card ul {
+  padding-left: 1.5rem;
+}
+#free-consultation .card li {
+  position: relative;
+  margin: var(--spacing-small) 0;
+}
+#free-consultation .card li::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: var(--clr-dark);
+  left: -1rem;
+  top: 0.5rem;
 }
 
 /* FAQ */
