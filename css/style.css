@@ -328,6 +328,39 @@ section {
 }
 
 /* FOOTER */
-footer, .footer {
-  background-color: var(--clr-mid);
+.footer {
+  background-color: var(--clr-background);
+  font-size: 14px;
+}
+.footer__logo {
+  margin: var(--spacing-small) 0;
+}
+.footer .info-items {
+  margin: var(--spacing-small) auto;
+}
+.footer .info-items > li {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 0;
+  margin: var(--spacing-small) 0;
+} 
+.footer .info-items > li p {
+  position: absolute;
+  left: 2.5rem;
+}
+.footer .col--links {
+  margin-bottom: var(--spacing-medium);
+}
+.footer .col--links ul {
+  margin: var(--spacing-small) 0;
+} 
+.footer .col--links li {
+  margin: var(--spacing-small) 0;
+}
+.footer .social-icons {
+  margin: var(--spacing-small) auto;
+}
+.footer .social-icons img {
+  margin-right: 1rem;
 }
