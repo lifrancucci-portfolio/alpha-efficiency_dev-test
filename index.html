@@ -27,10 +27,10 @@
 
 <body>
   <!-- HEADER -->
-  <header class="header">
+  <header class="header container">
     <img src="img/logos/logo.png" alt="A Better Weigh, Inc - Company Logo" class="header__logo">
     <div class="header__nav">
-      <img src="" alt="" class="nav__mobile-menu-icon">
+      <img src="img/icons/menu.png" alt="" class="nav__mobile-menu-icon">
       <ul class="nav__links">
         <li><a href="" class="nav__link">About Us</a></li>
         <li><a href="" class="nav__link">Book Online</a></li>
@@ -45,9 +45,9 @@
   </header>
 
   <!-- HERO -->
-  <section id="hero">
+  <section id="hero" class="container">
     <div class="hero__info-grid">
-      <h1 class="hero__title">Chicago's Free Medical Check-Up and Weight Loss Consultation</h1>
+      <h1 class="hero__title">Chicago's <span>Free</span> Medical Check-Up and Weight Loss Consultation</h1>
 
       <p class="hero__spots-remaining">Only <span>11</span> spots remaining</p>
 
@@ -57,46 +57,46 @@
         <div class="countdown__items">
           <!-- DAYS -->
           <div class="countdown__item">
-            <p>Days</p>
-            <div id="countdown__days">
+            <p class="countdown__text">Days</p>
+            <div id="countdown__days" class="countdown__number">
               00
             </div>
           </div>
           <!-- HOURS -->
           <div class="countdown__item">
-            <p>Hours</p>
-            <div id="countdown__hours">
+            <p class="countdown__text">Hours</p>
+            <div id="countdown__hours" class="countdown__number">
               16
             </div>
           </div>
           <!-- MINUTES -->
           <div class="countdown__item">
-            <p>Minutes</p>
-            <div id="countdown__minutes">
+            <p class="countdown__text">Minutes</p>
+            <div id="countdown__minutes" class="countdown__number">
               29
             </div>
           </div>
           <!-- SECONDS -->
           <div class="countdown__item">
-            <p>Seconds</p>
-            <div id="countdown__seconds">
+            <p class="countdown__text">Seconds</p>
+            <div id="countdown__seconds" class="countdown__number">
               27
             </div>
           </div>
         </div>
-
-        <!-- SPOTS AVAILABLE -->
-        <div class="hero__spots-available">
-          <p>
-            There are limited spots due to the Physicians schedule and the high demand for service. No credit card or
-            insurance required.
-          </p>
-        </div>
-
-        <!-- BOOK APPOINTMENT -->
-        <button class="btn btn--primary">Book my appointment</button>
-
       </div>
+
+      <!-- SPOTS AVAILABLE -->
+      <div class="hero__spots-available">
+        <p>
+          There are limited spots due to the Physicians schedule and the high demand for service. No credit card or
+          insurance required.
+        </p>
+      </div>
+
+      <!-- BOOK APPOINTMENT -->
+      <button class="btn btn--primary">Book my appointment</button>
+
     </div>
   </section>
 
