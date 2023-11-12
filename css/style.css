@@ -53,7 +53,6 @@ button, .btn {
   border: none;
   border-radius: 0;
   padding: .75em;
-  /* margin-top: var(--spacing-small); */
   margin: var(--spacing-medium) auto var(--spacing-small);
   justify-self: center;
 }
@@ -108,13 +107,24 @@ section {
   width: 89px;
 }
 .nav__links {
+  background-color: var(--clr-light);
   text-align: right;
   position: absolute;
+  width: 100%;
   top: 100%;
   right: 0;
+  padding: 0 var(--spacing-small) var(--spacing-small);
   opacity: 0;
   transform-origin: top;
   transform: scaleY(0);
+  transition: all .2s ease;
+}
+.nav__links.active {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.nav__links li {
+  padding: .2em 0;
 }
 
 /* HERO */
