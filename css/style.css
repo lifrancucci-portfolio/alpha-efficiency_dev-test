@@ -106,9 +106,7 @@ section {
   border-color: var(--clr-light);
   border-radius: 50%;
   border-width: 28px;
-}
-.circle.translucid {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 /* HEADER */
@@ -735,6 +733,11 @@ section {
   /* HEADER */
   .header {
     background-color: transparent;
+    transition: all .7s ease;
+  }
+  .header.variant {
+    background-color: var(--clr-background);
+    transition: all .7s ease;
   }
   .header .container {
     max-width: var(--max-width);
@@ -856,7 +859,6 @@ section {
     height: 271px;
     top: 20%;
     left: -10%;
-    opacity: 1;
   }
   #who-how .container {
     display: flex;

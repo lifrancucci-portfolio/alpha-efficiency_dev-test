@@ -8,6 +8,18 @@ function contentLoaded() {
     navMenu.classList.toggle("active");
     header.classList.toggle("active");
   });
+  // For DESKTOP ONLY
+  document.addEventListener("scroll", () => {
+    // CHANGE MENU COLORS
+    // If header is at the very top of the page, keep transparent style
+    if (window.scrollY <= 20 && header.classList.contains("variant")) {
+      header.classList.remove("variant");
+    }
+    // Else, change style to variant
+    if (window.scrollY >= 30 && !header.classList.contains("variant")) {
+      header.classList.add("variant");
+    }
+  });
 
   // COUNTDOWN TIMER
   // Get elements
@@ -36,16 +48,16 @@ function contentLoaded() {
     seconds.innerHTML = Math.floor((timeRemaining % (1000 * 60)) / 1000);
   });
 
-  // WE CAN HELP YOU
-  // Replace Image
+  // WE CAN HELP YOU - Change image for large screens
   const weCanHelpImg = document.querySelector(
     "#we-can-help-you .section__image"
   );
-
   window.addEventListener("resize", (e) => {
     if (window.innerWidth > 1200) {
+      // Replace imaage for WE CAN HELP YOU
       weCanHelpImg.src = "img/group-of-people.png";
     } else {
+      // Replace image for WE CAN HELP YOU
       weCanHelpImg.src = "img/group-of-doctors.png";
     }
   });
